@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="shrine_pink_100">#FEDBD0</color>
+    <color name= "shrine_pink_500">#FCA285</color>
+    <color name="shrine_pink_900">#442C2E</color>
+    <color name="shrine_pink_50">#FEEAE6</color>
+    <color name="surface_pink">#FFFBFA</color>
+    <color name="shrine_pink_300">#fdc8b7</color>
+    <color name="warning_red">#FF261B</color>
+</resources>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DirectPulseVoltammetry">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDPV"
+            android:text="@string/direct_pulse_voltammetry"
+            android:fontFamily="@font/rubik"
+            android:textSize="30sp"
+            android:textColor="@color/shrine_pink_900"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDPVName"
+                    android:text="@string/name"
+                    style="@style/TextBody"
+                    android:layout_marginTop="120dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDPVWait"
+                    android:text="@string/wait"
+                    style="@style/TextBody" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDPVStart"
+                    android:text="@string/start_potential"
+                    style="@style/TextBody" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDPVStop"
+                    android:text="@string/stop_potential"
+                    style="@style/TextBody" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDPVStep"
+                    android:text="@string/step"
+                    style="@style/TextBody" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtModulation"
+                    android:text="@string/modulation_amplitude"
+                    style="@style/TextBody" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtModTime"
+                    android:text="@string/modulation_time"
+                    style="@style/TextBody" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtInterval"
+                    android:text="@string/interval_time"
+                    style="@style/TextBody" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="100dp"
+                    android:hint="@string/name"
+                    app:hintTextColor="@color/shrine_pink_900">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTxtDPVName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/wait"
+                    app:hintTextColor="@color/shrine_pink_900"
+                    app:suffixText="@string/seconds">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTxtDPVWait"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/start_potential"
+                    app:hintTextColor="@color/shrine_pink_900"
+                    app:suffixText="@string/potentialUnit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTxtDPVStart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/stop_potential"
+                    app:hintTextColor="@color/shrine_pink_900"
+                    app:suffixText="@string/potentialUnit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTxtDPVStop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/step"
+                    app:hintTextColor="@color/shrine_pink_900"
+                    app:suffixText="@string/potentialUnit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTxtDPVStep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/modulation_amplitude"
+                    app:hintTextColor="@color/shrine_pink_900"
+                    app:suffixText="@string/potentialUnit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTxtModulation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/modulation_time"
+                    app:hintTextColor="@color/shrine_pink_900"
+                    app:suffixText="@string/seconds">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTxtModTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/interval_time"
+                    app:hintTextColor="@color/shrine_pink_900"
+                    app:suffixText="@string/seconds">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTxtInterval"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDPVStartScan"
+            android:text="@string/start_scan"
+            android:padding="20dp"
+            android:layout_marginTop="700dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

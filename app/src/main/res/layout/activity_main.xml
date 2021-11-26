@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:layout_marginTop="100dp"
+    android:orientation="vertical"
+    android:padding="50dp"
+    >
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/btnNewProcedure"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/new_procedure"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:id="@+id/btnMyProcedures"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/my_procedures"
+            android:textSize="20sp"/>
+        <Button
+            android:id="@+id/btnTestCircuit"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/test_circuit"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/settings"
+            android:textSize="20sp"/>
+
+</LinearLayout>

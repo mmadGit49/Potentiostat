@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewProcedure">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="35dp">
+
+        <TextView
+            android:id="@+id/txtSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_procedure"
+            android:layout_gravity="center_horizontal"
+            android:textSize="30sp"
+            android:textColor="@color/shrine_pink_900"
+            android:fontFamily="@font/rubik"/>
+
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/btnCV"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/cyclic_voltammetry"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:id="@+id/btnAmperometry"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/amperometry"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btnDPV"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/direct_pulse_voltammetry"
+
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btnEIS"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/EIS"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
