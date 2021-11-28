@@ -39,5 +39,20 @@
     <string name="last_frequency">Last Frequency</string>
     <string name="text_view">Text View</string>
     <string name="test_circuit">Test Circuit</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="cloud_backup">Cloud Backup</string>
+    <string name="turn_on">Turn on</string>
+    <string name="turn_off">Turn off</string>
+    <string name="discoverable">Discoverable</string>
+    <string name="paired_devices">Paired Devices</string>
+    <string name="paired_devices_">Paired Devices:</string>
+    <string name="BT_not_avail">Device does not support Bluetooth</string>
+    <string name="BT_avail">Bluetooth is available</string>
+    <string name="bluetooth_status">Bluetooth Status</string>
+    <string name="none">None</string>
+    <string name="BT_turnOn">Turning on bluetooth…</string>
+    <string name="BT_turnOff">Bluetooth has been turned off</string>
+    <string name="BT_alreadyOn">Bluetooth is already on</string>
+
 
 </resources>

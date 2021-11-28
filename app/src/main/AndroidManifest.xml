@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.stephany.potentiostat">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ImpedanceSpectroscopy"
+        <activity android:name=".Bluetooth"
+            android:parentActivityName=".Settings">
+
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+        <activity
+            android:name=".ImpedanceSpectroscopy"
             android:parentActivityName=".NewProcedure">
 
         </activity>

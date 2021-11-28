@@ -19,7 +19,7 @@
             android:fontFamily="@font/rubik"
             android:text="@string/EIS"
             android:textColor="@color/shrine_pink_900"
-            android:textSize="30sp" />
+            android:textSize="27sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,7 +37,7 @@
                     android:id="@+id/txtEISName"
                     android:text="@string/name"
                     style="@style/TextBody"
-                    android:layout_marginTop="120dp"
+                    android:layout_marginTop="130dp"
                     />
 
                 <TextView
@@ -85,7 +85,7 @@
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="100dp"
+                    android:layout_marginTop="115dp"
                     android:hint="@string/name"
                     app:hintTextColor="@color/shrine_pink_900">
 
@@ -175,7 +175,7 @@
             android:id="@+id/btnDPVStartScan"
             android:text="@string/start_scan"
             android:padding="20dp"
-            android:layout_marginTop="550dp"
+            android:layout_marginTop="560dp"
             android:layout_marginBottom="20dp"
             android:layout_centerHorizontal="true"
 

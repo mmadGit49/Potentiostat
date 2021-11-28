@@ -16,7 +16,7 @@
         android:id="@+id/txtCV"
         android:text="@string/cyclic_voltammetry"
         android:fontFamily="@font/rubik"
-        android:textSize="30sp"
+        android:textSize="27sp"
         android:textColor="@color/shrine_pink_900"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
@@ -107,7 +107,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="100dp"
                     android:hint="@string/name"
                     app:hintTextColor="@color/shrine_pink_900">
@@ -122,7 +122,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/wait"
                     app:hintTextColor="@color/shrine_pink_900"
@@ -138,7 +138,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/start_potential"
                     app:hintTextColor="@color/shrine_pink_900"
@@ -154,7 +154,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/upper_vertex"
                     app:hintTextColor="@color/shrine_pink_900"
@@ -170,7 +170,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/lower_vertex"
                     app:hintTextColor="@color/shrine_pink_900"
@@ -186,7 +186,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/stop_potential"
                     app:hintTextColor="@color/shrine_pink_900"
@@ -202,7 +202,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/no_of_scans"
                     app:hintTextColor="@color/shrine_pink_900">
@@ -216,7 +216,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/scan_rate"
                     app:hintTextColor="@color/shrine_pink_900"
@@ -231,7 +231,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:hint="@string/step"
                     app:hintTextColor="@color/shrine_pink_900"

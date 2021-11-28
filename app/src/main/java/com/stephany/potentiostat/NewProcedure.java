@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Objects;
+
 public class NewProcedure extends AppCompatActivity {
 
     private Button btnCV, btnAmperometry, btnDPV, btnEIS;
@@ -15,7 +17,7 @@ public class NewProcedure extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_procedure);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         btnCV = findViewById(R.id.btnCV);
         btnAmperometry = findViewById(R.id.btnAmperometry);
