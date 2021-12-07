@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Potentiostat</string>
-    <string name="new_procedure">New Procedure</string>
-    <string name="my_procedures">My Procedures</string>
+    <string name="new_scan"> Create New Scan</string>
+    <string name="my_procedures">My Scans</string>
     <string name="settings">Settings</string>
     <string name="dashboard">Dashboard</string>
     <string name="cyclic_voltammetry">Cyclic Voltammetry</string>
@@ -53,6 +53,8 @@
     <string name="BT_turnOn">Turning on bluetooth…</string>
     <string name="BT_turnOff">Bluetooth has been turned off</string>
     <string name="BT_alreadyOn">Bluetooth is already on</string>
+    <string name="welcome">Welcome to NottaStat!</string>
+    <string name="select_option">Select an Option to Proceed</string>
 
 
 </resources>

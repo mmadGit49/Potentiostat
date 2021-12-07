@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Settings.class);
+                Intent intent = new Intent(MainActivity.this,Bluetooth.class);
                 startActivity(intent);
             }
         });
