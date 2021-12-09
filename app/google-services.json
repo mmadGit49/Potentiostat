@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "808645931761",
+    "project_id": "potentiostat-6929d",
+    "storage_bucket": "potentiostat-6929d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808645931761:android:608dd1d1389f9bcb6c6f50",
+        "android_client_info": {
+          "package_name": "com.stephany.potentiostat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808645931761-64p6dcnm48qcnhitt8nndas6qisih5bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFekq2meOr1n2aVpaGq4uUbtLyfVS1Vfw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808645931761-64p6dcnm48qcnhitt8nndas6qisih5bb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

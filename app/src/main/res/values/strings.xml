@@ -55,6 +55,12 @@
     <string name="BT_alreadyOn">Bluetooth is already on</string>
     <string name="welcome">Welcome to NottaStat!</string>
     <string name="select_option">Select an Option to Proceed</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_out">Sign out</string>
+    <string name="sign_up">Sign up</string>
+    <string name="retype_password">Retype Password</string>
 
 
 </resources>

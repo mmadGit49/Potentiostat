@@ -12,35 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Bluetooth"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
+        <activity android:name=".SignUp"></activity>
+        <activity android:name=".Login" />
+        <activity
+            android:name=".Bluetooth"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ImpedanceSpectroscopy"
-            android:parentActivityName=".NewProcedure">
-
-        </activity>
+            android:parentActivityName=".NewProcedure" />
         <activity
             android:name=".DirectPulseVoltammetry"
-            android:parentActivityName=".NewProcedure">
-
-        </activity>
+            android:parentActivityName=".NewProcedure" />
         <activity
             android:name=".Amperometry"
-            android:parentActivityName=".NewProcedure">
-
-        </activity>
+            android:parentActivityName=".NewProcedure" />
         <activity
             android:name=".CyclicVoltammetry"
-            android:parentActivityName=".NewProcedure">
-
-        </activity>
+            android:parentActivityName=".NewProcedure" />
         <activity
             android:name=".NewProcedure"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
