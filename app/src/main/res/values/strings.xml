@@ -44,8 +44,7 @@
     <string name="turn_on">Turn on</string>
     <string name="turn_off">Turn off</string>
     <string name="discoverable">Discoverable</string>
-    <string name="paired_devices">Paired Devices</string>
-    <string name="paired_devices_">Paired Devices:</string>
+    <string name="paired_devices">Search Devices</string>
     <string name="BT_not_avail">Device does not support Bluetooth</string>
     <string name="BT_avail">Bluetooth is available</string>
     <string name="bluetooth_status">Bluetooth Status</string>
@@ -61,6 +60,8 @@
     <string name="sign_out">Sign out</string>
     <string name="sign_up">Sign up</string>
     <string name="retype_password">Retype Password</string>
+    <string name="connect">Connect</string>
+    <string name="pair">Pair</string>
 
 
 </resources>

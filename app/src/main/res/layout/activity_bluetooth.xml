@@ -1,83 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Bluetooth">
+    tools:context=".Bluetooth"
+    android:orientation="vertical">
+
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
-
-        <TextView
-            android:id="@+id/txtBTStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/rubik"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="@color/shrine_pink_900"
-            android:textSize="25sp" />
-
-        <ImageView
-            android:id="@+id/BTIcon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/ic_bluetooth"
-            android:contentDescription="@string/BT_avail" />
+            android:orientation="horizontal"
+            android:paddingTop="0dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp">
 
         <Button
-            android:id="@+id/btnBTOn"
-            android:layout_width="200dp"
+            android:id="@+id/btnPairedDevices"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
             android:minWidth="200dp"
-            android:text="@string/turn_on" />
+            android:text="@string/paired_devices"
+            />
 
-        <Button
-            android:id="@+id/btnBTOff"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:minWidth="200dp"
-            android:text="@string/turn_off" />
+            <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:minWidth="200dp"
+                android:text="@string/connect"
+                android:layout_weight="1"
+                android:layout_margin="10dp"/>
 
-        <Button
-            android:id="@+id/btnDiscoverable"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:minWidth="200dp"
-            android:text="@string/discoverable" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btnPaired"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:minWidth="200dp"
-            android:text="@string/paired_devices" />
 
-        <TextView
-            android:id="@+id/txtPairedDevices"
+        <ListView
+            android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/rubik"
-            android:minWidth="200dp"
-            android:text=""
-            android:textColor="@color/shrine_pink_900"
-            android:textSize="15sp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="20dp"/>
-
-    </LinearLayout>
+            android:layout_height="match_parent">
+        </ListView>
 
 
 
-</ScrollView>
+
+
+</LinearLayout>
