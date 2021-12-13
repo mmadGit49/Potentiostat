@@ -34,6 +34,7 @@ public class ImpedanceSpectroscopy extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ImpedanceSpectroscopy.this, Graphing.class);
+                intent.putExtra("TYPE","ImpedanceSpectroscopy");
                 startActivity(intent);
             }
         });

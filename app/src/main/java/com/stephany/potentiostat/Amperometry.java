@@ -33,6 +33,7 @@ public class Amperometry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Amperometry.this, Graphing.class);
+                intent.putExtra("TYPE","Amperometry");
                 startActivity(intent);
             }
         });

@@ -29,6 +29,7 @@ public class DirectPulseVoltammetry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DirectPulseVoltammetry.this, Graphing.class);
+                intent.putExtra("TYPE","DirectPulseVoltammetry");
                 startActivity(intent);
             }
         });

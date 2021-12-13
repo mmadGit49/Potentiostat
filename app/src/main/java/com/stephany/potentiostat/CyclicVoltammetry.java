@@ -31,6 +31,7 @@ public class CyclicVoltammetry extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CyclicVoltammetry.this, Graphing.class);
+                intent.putExtra("TYPE","CyclicVoltammetry");
                 startActivity(intent);
             }
         });
