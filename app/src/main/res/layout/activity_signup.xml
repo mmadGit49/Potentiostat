@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,8 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_centerInParent="true"
-        android:padding="50dp">
+        android:layout_marginTop="100dp"
+        android:padding="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_wu"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/dancing_script"
+            android:textColor="@color/shrine_pink_900"
+            android:textSize="30sp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -45,7 +55,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/password"
             app:hintTextColor="@color/shrine_pink_900"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -60,6 +71,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/retype_password"
             app:hintTextColor="@color/shrine_pink_900"
+            app:endIconMode="password_toggle"
             android:layout_marginTop="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -72,19 +84,18 @@
 
         <Button
             android:id="@+id/btnSignUp"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:text="@string/sign_up"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/sign_up_wu"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </LinearLayout>
 
-
-
-</RelativeLayout>
+</ScrollView>

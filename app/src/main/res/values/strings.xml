@@ -52,16 +52,20 @@
     <string name="BT_turnOn">Turning on bluetooth…</string>
     <string name="BT_turnOff">Bluetooth has been turned off</string>
     <string name="BT_alreadyOn">Bluetooth is already on</string>
-    <string name="welcome">Welcome to NottaStat!</string>
+    <string name="welcome">Hello </string>
     <string name="select_option">Select an Option to Proceed</string>
     <string name="sign_in">Sign in</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="sign_out">Sign out</string>
-    <string name="sign_up">Sign up</string>
+    <string name="sign_up"> <u>Sign up</u> </string>
+    <string name="sign_up_wu">Sign up</string>
     <string name="retype_password">Retype Password</string>
     <string name="connect">Connect</string>
     <string name="pair">Pair</string>
+    <string name="nottastat">NottaStat</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="home">Home</string>
 
 
 </resources>

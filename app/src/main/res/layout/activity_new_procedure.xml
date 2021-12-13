@@ -22,7 +22,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="30sp"
             android:textColor="@color/shrine_pink_900"
-            android:fontFamily="@font/rubik"/>
+            android:fontFamily="@font/dancing_script"/>
 
 
         <Button

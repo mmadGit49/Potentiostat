@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:fontFamily="@font/rubik"
+            android:fontFamily="@font/dancing_script"
             android:text="@string/EIS"
             android:textColor="@color/shrine_pink_900"
             android:textSize="27sp" />

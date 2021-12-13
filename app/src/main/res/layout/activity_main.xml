@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="80dp"
         android:padding="50dp">
 
         <TextView
@@ -18,7 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/welcome"
-            android:textSize="25sp"
+            android:fontFamily="@font/dancing_script"
+            android:textSize="35sp"
             android:textColor="@color/shrine_pink_900"
             android:layout_gravity="center_horizontal"/>
 
@@ -27,11 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/select_option"
+            android:fontFamily="@font/rubik"
             android:textSize="15sp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
             />
-
 
         <Button
             android:id="@+id/btnNewProcedure"
@@ -57,21 +59,6 @@
             android:text="@string/test_circuit"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/btnSettings"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/settings"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/sign_out"
-            android:textSize="20sp" />
 
     </LinearLayout>
 

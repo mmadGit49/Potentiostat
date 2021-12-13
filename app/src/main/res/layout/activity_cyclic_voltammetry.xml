@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txtCV"
         android:text="@string/cyclic_voltammetry"
-        android:fontFamily="@font/rubik"
+        android:fontFamily="@font/dancing_script"
         android:textSize="27sp"
         android:textColor="@color/shrine_pink_900"
         android:layout_centerHorizontal="true"

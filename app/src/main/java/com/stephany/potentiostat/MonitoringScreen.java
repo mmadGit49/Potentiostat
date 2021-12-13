@@ -76,6 +76,14 @@ public class MonitoringScreen extends Activity {
         LineData data = new LineData(dataSets);
         mpLineChart.setData(data);
 
+        mpLineChart.setBackgroundColor(Color.WHITE);
+        mpLineChart.setNoDataText("No Data");
+        mpLineChart.setNoDataTextColor(Color.BLUE);
+        mpLineChart.setDrawGridBackground(true);  //draw grid
+        mpLineChart.setDrawBorders(true);  //borders
+        mpLineChart.setBorderWidth(2);
+        lineDataSet1.setLineWidth(2);
+        lineDataSet1.setColor(Color.MAGENTA);
         mpLineChart.animateX(1000);
         mpLineChart.invalidate();
 

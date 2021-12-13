@@ -19,6 +19,7 @@ public class CyclicVoltammetry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cyclic_voltammetry);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override
