@@ -7,9 +7,123 @@
     android:orientation="vertical"
     tools:context=".MonitoringScreen">
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/line_chart"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"/>
+
+                <TextView
+                    android:id="@+id/procedureName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="Name"
+                    android:textSize="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"/>
+
+                <TextView
+                    android:id="@+id/procedureDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="10s"
+                    android:textSize="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Scan Rate"/>
+
+                <TextView
+                    android:id="@+id/procedureScanRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="2"
+                    android:textSize="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wait Duration"/>
+
+                <TextView
+                    android:id="@+id/procedureWait"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="50s"
+                    android:textSize="30dp" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Reading"/>
+
+        </LinearLayout>
+
+    </GridLayout>
 
 </LinearLayout>

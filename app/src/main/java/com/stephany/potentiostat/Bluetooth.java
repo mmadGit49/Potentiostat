@@ -47,20 +47,27 @@ public class Bluetooth extends AppCompatActivity {
     private static final String DEVICE_LIST_SELECTED = "com.example.anysensormonitoring.devicelistselected";
     public static final String BUFFER_SIZE = "com.example.anysensormonitoring.buffersize";
     private static final String TAG = "BlueTest5-MainActivity";
-    public static final String PARAMETERS = "DURATION";
 
+    public static final String PARAMETERS = "PROCEDURE_PARAMS";
+    ProcedureParams procedureParams;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
 
-
         Button btnPairedDevices = findViewById(R.id.btnPairedDevices);
         btnConnect = findViewById(R.id.btnConnect);
         listView = findViewById(R.id.listView);
 
         btnConnect.setEnabled(false);
+
+        try{
+            procedureParams = (ProcedureParams) getIntent().getSerializableExtra(PARAMETERS);
+            Log.d(TAG, "onCreate: Procedure Params Received");
+        }catch (Exception e){
+            Log.d(TAG, "onCreate: "+ e.getMessage());
+        }
 
         if (savedInstanceState != null) {
             ArrayList<BluetoothDevice> list = savedInstanceState.getParcelableArrayList(DEVICE_LIST);
@@ -104,10 +111,12 @@ public class Bluetooth extends AppCompatActivity {
                 try {
                     BluetoothDevice device = ((MyAdapter) (listView.getAdapter())).getSelectedItem();
                     Intent intent = new Intent(getApplicationContext(), MonitoringScreen.class);
+                    //set information to be passed to next activity
                     intent.putExtra(DEVICE_EXTRA, device);
                     intent.putExtra(DEVICE_UUID, mDeviceUUID.toString());
                     intent.putExtra(BUFFER_SIZE, mBufferSize);
-                    intent.putExtra(PARAMETERS, getIntent().getSerializableExtra(PARAMETERS));
+                    intent.putExtra(PARAMETERS, procedureParams);
+
                     startActivity(intent);
                     msg("Device Name: " + device.getName().toString());
 

@@ -38,6 +38,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class MonitoringScreen extends Activity {
     private static final String TAG = "BlueTest5-MainActivity";
@@ -46,19 +47,43 @@ public class MonitoringScreen extends Activity {
     private BluetoothSocket mBTSocket;
     private ReadInput mReadThread = null;
     private LineChart mpLineChart;
-    public static final String PARAMETERS = "DURATION";
 
     private boolean mIsUserInitiatedDisconnect = false;
+
+    //Variables to get procedure parameters
+    public static final String PARAMETERS = "PROCEDURE_PARAMS";
+    ProcedureParams procedureParams;
 
     // All controls here
     private boolean mIsBluetoothConnected = false;
     private BluetoothDevice mDevice;
     private ProgressDialog progressDialog;
 
+    private TextView txtName, txtDuration, txtScanRate, txtWait;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monitoring_screen);
+
+        txtName = findViewById(R.id.procedureName);
+        txtDuration = findViewById(R.id.procedureDuration);
+        txtScanRate = findViewById(R.id.procedureScanRate);
+        txtWait = findViewById(R.id.procedureWait);
+
+        try{
+            procedureParams = (ProcedureParams) getIntent().getSerializableExtra(PARAMETERS);
+
+            txtName.setText(procedureParams.getName());
+            txtDuration.setText(procedureParams.getDuration());
+            txtScanRate.setText(procedureParams.getScanRate());
+            txtWait.setText(procedureParams.getWait());
+
+            Log.d(TAG, "onCreate: Procedure Params Received");
+        }catch (Exception e){
+            procedureParams = null;
+            Log.d(TAG, "onCreate: "+ e.getMessage());
+        }
 
         mpLineChart = (LineChart) findViewById(R.id.line_chart);
 
@@ -98,8 +123,10 @@ public class MonitoringScreen extends Activity {
 
         private boolean bStop = false;
         private Thread t;
-        private int duration = 10;
-        private int wait=0, scanRate=0;
+
+        int duration = 0;
+        int wait=0;
+        int scanRate=0;
 
         public ReadInput() {
             t = new Thread(this, "Input Thread");
@@ -114,7 +141,12 @@ public class MonitoringScreen extends Activity {
         public void run() {
             InputStream inputStream;
             int seconds = 0;
-            duration =10;
+
+            if(procedureParams != null){
+                duration = procedureParams.getDuration();
+            }else{
+                duration = 10;
+            }
 
             try {
                 inputStream = mBTSocket.getInputStream();
