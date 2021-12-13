@@ -28,7 +28,7 @@ public class DirectPulseVoltammetry extends AppCompatActivity {
         btnDPVStartScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DirectPulseVoltammetry.this, Bluetooth.class);
+                Intent intent = new Intent(DirectPulseVoltammetry.this, Graphing.class);
                 startActivity(intent);
             }
         });

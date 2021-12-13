@@ -30,7 +30,7 @@ public class CyclicVoltammetry extends AppCompatActivity {
         btnCVStartScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CyclicVoltammetry.this, Bluetooth.class);
+                Intent intent = new Intent(CyclicVoltammetry.this, Graphing.class);
                 startActivity(intent);
             }
         });

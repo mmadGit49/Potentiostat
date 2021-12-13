@@ -32,7 +32,7 @@ public class Amperometry extends AppCompatActivity {
         btnAmpStartScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Amperometry.this, Bluetooth.class);
+                Intent intent = new Intent(Amperometry.this, Graphing.class);
                 startActivity(intent);
             }
         });

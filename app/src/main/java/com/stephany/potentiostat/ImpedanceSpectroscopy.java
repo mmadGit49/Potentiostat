@@ -33,7 +33,7 @@ public class ImpedanceSpectroscopy extends AppCompatActivity {
         btnEISStartScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ImpedanceSpectroscopy.this, Bluetooth.class);
+                Intent intent = new Intent(ImpedanceSpectroscopy.this, Graphing.class);
                 startActivity(intent);
             }
         });

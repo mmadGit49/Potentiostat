@@ -182,7 +182,7 @@ public class MonitoringScreen extends Activity {
                             Log.d("JSON Exception", e.getMessage());
                         }
                     }
-                    Thread.sleep(1000/scanRate);
+                    Thread.sleep(1000);
                 }
             } catch (IOException e) {
 // TODO Auto-generated catch block
