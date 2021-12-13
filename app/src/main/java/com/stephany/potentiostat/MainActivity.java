@@ -24,7 +24,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnNewProcedure, btnMyProcedures;
+    private Button btnNewProcedure, btnMyProcedures, btnTestCircuit;
     private FirebaseAuth mAuth;
     private TextView txtUserWelcome;
 
@@ -40,11 +40,20 @@ public class MainActivity extends AppCompatActivity {
 
         btnNewProcedure = findViewById(R.id.btnNewProcedure);
         btnMyProcedures = findViewById(R.id.btnMyProcedures);
+        btnTestCircuit=findViewById(R.id.btnTestCircuit);
 
         btnNewProcedure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,NewProcedure.class);
+                startActivity(intent);
+            }
+        });
+
+        btnTestCircuit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,TestCircuit.class);
                 startActivity(intent);
             }
         });

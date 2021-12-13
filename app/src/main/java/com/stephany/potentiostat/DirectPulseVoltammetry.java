@@ -4,8 +4,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -13,11 +16,22 @@ import java.util.Objects;
 
 public class DirectPulseVoltammetry extends AppCompatActivity {
 
+    private Button btnDPVStartScan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_direct_pulse_voltammetry);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        btnDPVStartScan = findViewById(R.id.btnDPVStartScan);
+
+        btnDPVStartScan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DirectPulseVoltammetry.this, Bluetooth.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

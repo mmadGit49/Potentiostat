@@ -7,16 +7,9 @@
     android:orientation="vertical"
     tools:context=".MonitoringScreen">
 
-        <CheckBox
-            android:id="@+id/chkReceiveText"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Read" />
-
-        <com.github.mikephil.charting.charts.LineChart
-            android:id="@+id/line_chart"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

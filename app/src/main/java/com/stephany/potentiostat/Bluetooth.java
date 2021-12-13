@@ -47,6 +47,8 @@ public class Bluetooth extends AppCompatActivity {
     private static final String DEVICE_LIST_SELECTED = "com.example.anysensormonitoring.devicelistselected";
     public static final String BUFFER_SIZE = "com.example.anysensormonitoring.buffersize";
     private static final String TAG = "BlueTest5-MainActivity";
+    public static final String PARAMETERS = "DURATION";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,11 +103,12 @@ public class Bluetooth extends AppCompatActivity {
             public void onClick(View arg0) {
                 try {
                     BluetoothDevice device = ((MyAdapter) (listView.getAdapter())).getSelectedItem();
-                Intent intent = new Intent(getApplicationContext(), MonitoringScreen.class);
-                intent.putExtra(DEVICE_EXTRA, device);
-                intent.putExtra(DEVICE_UUID, mDeviceUUID.toString());
-                intent.putExtra(BUFFER_SIZE, mBufferSize);
-                startActivity(intent);
+                    Intent intent = new Intent(getApplicationContext(), MonitoringScreen.class);
+                    intent.putExtra(DEVICE_EXTRA, device);
+                    intent.putExtra(DEVICE_UUID, mDeviceUUID.toString());
+                    intent.putExtra(BUFFER_SIZE, mBufferSize);
+                    intent.putExtra(PARAMETERS, getIntent().getSerializableExtra(PARAMETERS));
+                    startActivity(intent);
                     msg("Device Name: " + device.getName().toString());
 
                 } catch (Exception e) {

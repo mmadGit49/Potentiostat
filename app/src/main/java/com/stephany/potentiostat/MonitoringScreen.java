@@ -1,10 +1,12 @@
 package com.stephany.potentiostat;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.UUID;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -44,12 +46,11 @@ public class MonitoringScreen extends Activity {
     private BluetoothSocket mBTSocket;
     private ReadInput mReadThread = null;
     private LineChart mpLineChart;
-
+    public static final String PARAMETERS = "DURATION";
 
     private boolean mIsUserInitiatedDisconnect = false;
 
     // All controls here
-    private CheckBox chkReceiveText;
     private boolean mIsBluetoothConnected = false;
     private BluetoothDevice mDevice;
     private ProgressDialog progressDialog;
@@ -59,7 +60,7 @@ public class MonitoringScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monitoring_screen);
 
-        mpLineChart=(LineChart) findViewById(R.id.line_chart);
+        mpLineChart = (LineChart) findViewById(R.id.line_chart);
 
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
@@ -67,9 +68,8 @@ public class MonitoringScreen extends Activity {
         mDeviceUUID = UUID.fromString(b.getString(Bluetooth.DEVICE_UUID));
         mMaxChars = b.getInt(Bluetooth.BUFFER_SIZE);
         Log.d(TAG, "Ready");
-        chkReceiveText = (CheckBox) findViewById(R.id.chkReceiveText);
 
-        LineDataSet lineDataSet1 = new LineDataSet(dataValues1(),"First Run");
+        LineDataSet lineDataSet1 = new LineDataSet(dataValues1(), "First Run");
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
         dataSets.add(lineDataSet1);
 
@@ -86,8 +86,8 @@ public class MonitoringScreen extends Activity {
         lineDataSet1.setColor(Color.MAGENTA);
         mpLineChart.animateX(1000);
         mpLineChart.invalidate();
-
     }
+
 
     private ArrayList<Entry> dataValues1() {
         ArrayList<Entry> dataVals = new ArrayList<Entry>();
@@ -98,6 +98,8 @@ public class MonitoringScreen extends Activity {
 
         private boolean bStop = false;
         private Thread t;
+        private int duration = 10;
+        private int wait=0, scanRate=0;
 
         public ReadInput() {
             t = new Thread(this, "Input Thread");
@@ -112,10 +114,12 @@ public class MonitoringScreen extends Activity {
         public void run() {
             InputStream inputStream;
             int seconds = 0;
+            duration =10;
 
             try {
                 inputStream = mBTSocket.getInputStream();
-                while (!bStop) {
+
+                while (seconds < duration) {
                     byte[] buffer = new byte[256];
                     if (inputStream.available() > 0) {
                         inputStream.read(buffer);
@@ -131,25 +135,22 @@ public class MonitoringScreen extends Activity {
                          * If checked then receive text, better design would probably be to stop thread if unchecked and free resources, but this is a quick fix
                          */
 
-                        if (chkReceiveText.isChecked()) {
-                            try{
-                                seconds++;
-                                JSONObject reading = new JSONObject(strInput);
+                        try {
+                            seconds++;
+                            JSONObject reading = new JSONObject(strInput);
 
-                                LineData lineData = mpLineChart.getData();
-                                lineData.addEntry(new Entry(seconds,Float.parseFloat(reading.getString("reading"))),0);
-                                mpLineChart.notifyDataSetChanged();
-                                mpLineChart.invalidate();
+                            LineData lineData = mpLineChart.getData();
+                            lineData.addEntry(new Entry(seconds, Float.parseFloat(reading.getString("reading"))), 0);
+                            mpLineChart.notifyDataSetChanged();
+                            mpLineChart.invalidate();
 
-                                Log.d("TAG",reading.getString("reading"));
-                                Log.d("TAG", String.valueOf(seconds));
-                            }catch (Exception e){
-                                Log.d("JSON Exception",e.getMessage());
-                            }
+                            Log.d("TAG", reading.getString("reading"));
+                            Log.d("TAG", String.valueOf(seconds));
+                        } catch (Exception e) {
+                            Log.d("JSON Exception", e.getMessage());
                         }
-
                     }
-                    Thread.sleep(1000);
+                    Thread.sleep(1000/scanRate);
                 }
             } catch (IOException e) {
 // TODO Auto-generated catch block

@@ -4,9 +4,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -24,7 +26,16 @@ public class Amperometry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amperometry);
 
+        btnAmpStartScan = findViewById(R.id.btnAmpStartScan);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+        btnAmpStartScan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Amperometry.this, Bluetooth.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

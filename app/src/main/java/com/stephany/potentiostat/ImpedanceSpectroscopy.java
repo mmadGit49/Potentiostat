@@ -4,10 +4,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -18,12 +21,22 @@ import java.util.Objects;
 public class ImpedanceSpectroscopy extends AppCompatActivity {
 
     private Spinner waveTypeSpinner;
+    private Button btnEISStartScan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_impedance_spectroscopy);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        btnEISStartScan = findViewById(R.id.btnEISStartScan);
+
+        btnEISStartScan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ImpedanceSpectroscopy.this, Bluetooth.class);
+                startActivity(intent);
+            }
+        });
 
         waveTypeSpinner = findViewById(R.id.waveTypeSpinner);
 
